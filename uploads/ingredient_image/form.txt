@@ -1,0 +1,68 @@
+in marilogin_model
+
+    public function email_verify($email)
+    {
+        $this->db->select('client_user');
+        $this->db->where('client_email',$email);
+        $user = $this->db->get('client_details')->result_array();
+        if(empty($user)){
+            return false;
+        }
+        $id= $user[0]['client_user'];
+
+        $this->db->select('business_name');
+        $this->db->where('restaurant_id',$id);
+        $name=$this->db->get('restaurant_registration')->result_array();
+        if(empty($name)){
+            return false;
+        }
+
+        $this->db->select('email_verify_status');
+        $this->db->where('client_email',$email);
+        $verify = $this->db->get('client_details')->result_array();
+
+        if ($verify[0]['email_verify_status']==1) {
+            $data['verification']='Email Verified';
+        } else {
+            $data['verification']='Email Not Verified';
+        }
+
+        $data['email']=$email;
+        $data['name']=$name[0]['business_name'];
+
+        return $data;
+    }
+
+in marielogin 
+
+    public function login_post(){
+        $login_model = new MarieLogin_model;
+        $inputdata = json_decode(file_get_contents("php://input"),true);
+
+        $email = $inputdata['email'];
+        $password = $inputdata['password'];
+
+        $result = $login_model->login_check($email,$password);
+        if($result){
+            $data=$login_model->email_verify($email);
+            if($data){
+            $this->response([
+                'status' => 200,
+                'message' => 'Success',
+                'email' => $data['email'],
+                'restaurant name' => $data['name'],
+                'email verification' => $data['verification']
+            ],RestController::HTTP_OK);
+        }
+        }
+        else{
+            $this->response([
+                'status' => 500,
+                'message' => 'Incorrect Password or Email'
+            ],RestController::HTTP_BAD_REQUEST);
+        }
+    }
+
+
+
+   

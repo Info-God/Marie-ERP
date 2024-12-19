@@ -1,0 +1,52 @@
+infratel.xyz site feedback
+
+Home Page
+
+1. Home - Menu should full width
+2. About Us, FAQ menu items should removed from header menu
+3. Color coding (rgb233,23,23) should be primary color
+4. Slider in banner - 3 slide
+5. In Pricing section - Our Benefits from home-2
+6. In Testimonial Section - What we offer from home-2
+
+About Us Page
+
+1. Our Testimonials - Discover Services from home-2
+2. Color coding in the pages
+3. Partner Section needs to be blog grid type
+4. Alignment in Why Choose Us section
+5. Alignment in Testimonials section
+6. add this section http://ozix.wgl-demo.net/team/tony-barton/ - Personal Experience, Professional Experience, career guidelines section
+7. Discover Company seciton from http://ozix.wgl-demo.net/home-3/
+
+MULTI SERVICE PAGE
+
+1. Alignment in Our Numbers
+2. Color Coding
+
+SINGLE SERVICE PAGE
+
+1. 02 - SOME FACTS SECTION FROM OUR TEAM PAGE (NOT PROFESSIONALS SECTION)
+2. 03 - Experts in Field ( section from services-3 page)
+2. 04 Services - looks totally different comparing original
+
+SINGLE PRODUCT PAGE
+
+1. Color coding
+
+SINGLE BLOG PAGE 
+
+1. Alignment and color coding not proper
+
+FAQ
+1. Color coding
+
+TERMS, PRIVACY, PAYMENT
+
+1. http://ozix.wgl-demo.net/portfolio/the-room-project/
+2. 3 Bar like simple facts, our passion, best projects - from http://ozix.wgl-demo.net/home-3/
+3. about kate brown seciton like from blog page
+4. blog grid type 6 gird (3x2)
+5. what we offer section from http://ozix.wgl-demo.net/home-2/ page
+
+
